@@ -1,0 +1,9 @@
+.container-fluid .sitename{
+    font-size: 30px;
+}
+.container-fluid .search-bar{
+    height: 46px;
+    width: 28.5rem;
+    margin-left: 200px;
+}
+
