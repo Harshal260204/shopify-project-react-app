@@ -11,6 +11,7 @@ import Categories from './Pages/Categories';
 import Beauty from './Pages/Beauty';
 import Fragrances from './Pages/Fragrances';
 import Watches from './Pages/Watches';
+import Cart from './Pages/CartPage';
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
         <Route path='/' element={<Home/>}/>
         <Route path='/Products' element={<Products/>}/>
         <Route path='/Categories' element={<Categories/>}/>
+        <Route path='/Cart' element={<Cart/>}/>
       </Routes>
 
       <Routes>
