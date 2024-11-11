@@ -26,7 +26,26 @@ export default function Products2() {
     }
   return (
     <div>
-        <h1></h1>
+        <h1 className='fs-3 m-4'>Rpoducts</h1>
+            <div className='container d-flex flex-wrap'>
+                <div className='btn btn-primary' onClick={()=>filterData("All")}>All</div>
+                <div className='btn btn-primary' onClick={()=>filterData("Mobile")}>Mobile</div>
+                <div className='btn btn-primary' onClick={()=>filterData("laptop")}>Laptop</div>
+                <div className='btn btn-primary' onClick={()=>filterData("tv")}>TV</div>
+                <div className='btn btn-primary' onClick={()=>filterData("watch")}>Watches</div>
+            </div>
+
+            <div className='row'>
+                {
+                    filterData?.map((product,index)=>{
+                        return(
+                            <div>
+
+                            </div>
+                        )
+                    })
+                }
+            </div>
 
     </div>
   )
