@@ -26,7 +26,7 @@ export default function Products2() {
     }
   return (
     <div>
-        <h1 className='fs-3 m-4'>Rpoducts</h1>
+        <h1 className='fs-3 m-4'>Products</h1>
             <div className='container d-flex flex-wrap'>
                 <div className='btn btn-primary' onClick={()=>filterData("All")}>All</div>
                 <div className='btn btn-primary' onClick={()=>filterData("Mobile")}>Mobile</div>
