@@ -39,9 +39,19 @@ export default function Products2() {
                 {
                     filterData?.map((product,index)=>{
                         return(
-                            <div>
-
+                            <div className='card ms-4 mb-4 col-12 col-sm-2 col-md-3 col-lg-6' style={{width:"16rem",height:'auto'}}>
+                            <img src={product.thumbnail} className='card-img-top m-3 ms-2 b' style={{width:"13rem",height:"210px"}}/>
+                                <div className='card-body'>
+                                    <h5 className='card-title m-2'>{product.title}</h5>
+                                    <p className='card-text fw-600 fw-medium mb-1'>{product.description[0]}</p>
+                                        <div className='d-flex justify-content-center align-items-center'>
+                                            <span className='text-warning fs-4'>&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                                            <span className='text-light-emphasis fw-bold me-5'>{product.price}</span>
+                                        </div>
+                                </div>
                             </div>
+
+                           
                         )
                     })
                 }
