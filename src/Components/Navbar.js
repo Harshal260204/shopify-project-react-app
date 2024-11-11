@@ -27,15 +27,15 @@ export default function Navbar() {
         </li>
 
         <li className="nav-item fw-bold ms-4 fs-5">
-          <a className="nav-link" href="#">Login</a>
-        </li>
-
-        <li className="nav-item fw-bold ms-4 fs-5">
           <a className="nav-link" href="#">Products 2</a>
         </li>
         
         <li className="nav-item fw-bold ms-4 fs-5">
           <Link to='/Cart' className="nav-link" href="#">Cart</Link>
+        </li>
+
+        <li className="nav-item fw-bold ms-4 fs-5">
+          <a className="nav-link" href="#">Login</a>
         </li>
         
       </ul>
