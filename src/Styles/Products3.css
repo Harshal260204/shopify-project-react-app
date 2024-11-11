@@ -1,0 +1,12 @@
+.rating span {
+    font-size: 1.2rem;
+  }
+  
+  img.img {
+    width: 50px;
+    height: 50px;
+  }
+  
+  button.btn {
+    width: 150px;
+  }

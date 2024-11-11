@@ -12,6 +12,7 @@ import Beauty from './Pages/Beauty';
 import Fragrances from './Pages/Fragrances';
 import Watches from './Pages/Watches';
 import Cart from './Pages/CartPage';
+import Products3 from './Pages/Products3';
 
 
 function App() {
@@ -24,6 +25,9 @@ function App() {
         <Route path='/Products' element={<Products/>}/>
         <Route path='/Categories' element={<Categories/>}/>
         <Route path='/Cart' element={<Cart/>}/>
+
+        {/* Product Detail Sample Page */}
+        <Route path='/ProductDetail' element={<Products3/>}/>
       </Routes>
 
       <Routes>
