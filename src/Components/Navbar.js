@@ -26,9 +26,9 @@ export default function Navbar() {
           <Link to="/Categories" className="nav-link" href="#">Categories</Link>
         </li>
 
-        <li className="nav-item fw-bold ms-4 fs-5">
+        {/* <li className="nav-item fw-bold ms-4 fs-5">
           <Link to='/ProductDetail' className="nav-link" href="#">Products 3</Link>
-        </li>
+        </li> */}
 
         <li className="nav-item fw-bold ms-4 fs-5">
           <Link to='/Cart' className="nav-link" href="#">Cart</Link>
