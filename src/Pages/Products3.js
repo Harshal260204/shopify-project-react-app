@@ -3,7 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import '../Styles/Products3.css';
 import Navbar from '../Components/Navbar';
 import Footer from '../Components/Footer';
-import maskara from '../images/maskara.png'
+import maskara from '../Images/maskara.png'
 
 const App = () => {
   return (
@@ -43,9 +43,9 @@ const App = () => {
 
           
           <div className="d-flex">
-            <button className="btn btn-danger me-2">Add to Cart</button>
-            <button className="btn btn-primary me-2">Buy Now</button>
-            <button className="btn btn-warning">Add to Wishlist</button>
+            <button className="btn buttonNew btn-danger me-2">Add to Cart</button>
+            <button className="btn buttonNew btn-primary me-2">Buy Now</button>
+            <button className="btn buttonNew btn-warning">Add to Wishlist</button>
           </div>
         </div>
 
