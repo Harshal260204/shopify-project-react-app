@@ -24,8 +24,8 @@ export default function Products() {
             setFilteredData(data)
         }
         else{
-            const newData = data.filter((props)=>props.category===category)
-            setFilteredData(newData)
+            // const newData = data.filter((props)=>props.category===category)
+            // setFilteredData(newData)
         }
     }
 
