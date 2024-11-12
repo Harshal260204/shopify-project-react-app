@@ -5,7 +5,7 @@ import axios from 'axios';
 
 const ProductDetail = () => {
   const { cat, id } = useParams();
-  const [data, setData] = useState({});
+  const [data, setData] = useState([]);
 
   const singleFetch = async () => {
     const response = await axios(`https://shivraj-chavan.github.io/api/electronics/${cat}/${id}.json`);

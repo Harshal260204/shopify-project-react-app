@@ -24,13 +24,13 @@ export default function Products() {
             setFilteredData(data)
         }
         else{
-            // const newData = data.filter((props)=>props.category===category)
-            // setFilteredData(newData)
+            const newData = data.filter((props)=>props.category===category)
+            setFilteredData(newData)
         }
     }
 
     const openPage=(product)=>{
-      navigate(`/productDetail/${product.category}/${product.id}`);
+      navigate(`/productDetails/${product.category}/${product.id}`);
 
     }
   return (
@@ -48,7 +48,7 @@ export default function Products() {
                 {
                     filteredData?.map((product,index)=>{
                         return(
-                            <div className='card ms-4 mb-4 col-12 col-sm-2 col-md-3 col-lg-6' style={{width:"16rem",height:'auto'}}>
+                            <div className='card mx-auto ms-4 mb-4 col-12 col-sm-2 col-md-3 col-lg-6' style={{width:"16rem",height:'auto'}}>
                             <img src={product.thumbnail} onClick={()=>(openPage(product))} className='card-img-top m-3 ms-2 b' style={{width:"13rem",height:"210px"}}/>
                                 <div className='card-body'>
                                     <h5 className='card-title m-2'>{product.title}</h5>

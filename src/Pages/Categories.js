@@ -1,7 +1,30 @@
-import React from "react";
+import {React , useState , useEffect} from "react";
 import { Link } from "react-router-dom";
+import axios from "axios";
 
 function Categories() {
+    const [data,setData] = useState([])         
+    const [filteredData,setFilteredData]=useState(data)
+
+    useEffect(()=>{
+        const fetchApi = async()=>{
+            const {data} = await axios("https://shivraj-chavan.github.io/api/electronics.json")
+            setData(data)
+            setFilteredData(data)
+
+        }
+        fetchApi()
+    },[])
+
+    const filterData=(category)=>{
+        if(category=="All"){
+            setFilteredData(data)
+        }
+        else{
+            // const newData = data.filter((props)=>props.category===category)
+            // setFilteredData(newData)
+        }
+    }
   return (
     <div class="categories">
             <h2 class="ms-1 mt-4 fs-5">Categories</h2>
@@ -23,6 +46,18 @@ function Categories() {
                     <div class="category-container bg-secondary-subtle text-start text-dark p-3">
                         <h5>Mens Watches</h5>
                         <h6><Link to="/MensWatches" class="text-decoration-none" href="#">View Products</Link></h6>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2 p-2">
+                    <div class="category-container bg-secondary-subtle text-start text-dark p-3">
+                        <h5>Laptops</h5>
+                        <h6><a class="text-decoration-none" href="#">View Products</a></h6>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2 p-2">
+                    <div class="category-container bg-secondary-subtle text-start text-dark p-3">
+                        <h5>Smartphones</h5>
+                        <h6><a class="text-decoration-none" href="#">View Products</a></h6>
                     </div>
                 </div>
                 <div class="col-6 col-sm-4 col-md-3 col-lg-2 p-2">
@@ -49,12 +84,7 @@ function Categories() {
                         <h6><a class="text-decoration-none" href="#">View Products</a></h6>
                     </div>
                 </div>
-                <div class="col-6 col-sm-4 col-md-3 col-lg-2 p-2">
-                    <div class="category-container bg-secondary-subtle text-start text-dark p-3">
-                        <h5>Laptops</h5>
-                        <h6><a class="text-decoration-none" href="#">View Products</a></h6>
-                    </div>
-                </div>
+                
                 <div class="col-6 col-sm-4 col-md-3 col-lg-2 p-2">
                     <div class="category-container bg-secondary-subtle text-start text-dark p-3">
                         <h5>Mens Shirts</h5>
@@ -82,12 +112,6 @@ function Categories() {
                 <div class="col-6 col-sm-4 col-md-3 col-lg-2 p-2">
                     <div class="category-container bg-secondary-subtle text-start text-dark p-3">
                         <h5>Skin Care</h5>
-                        <h6><a class="text-decoration-none" href="#">View Products</a></h6>
-                    </div>
-                </div>
-                <div class="col-6 col-sm-4 col-md-3 col-lg-2 p-2">
-                    <div class="category-container bg-secondary-subtle text-start text-dark p-3">
-                        <h5>Smartphones</h5>
                         <h6><a class="text-decoration-none" href="#">View Products</a></h6>
                     </div>
                 </div>
