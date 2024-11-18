@@ -2,8 +2,12 @@ import React, { useEffect, useState } from 'react'
 import Navbar from '../Components/Navbar'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
+import { useDispatch } from 'react-redux'
+import { addcart } from '../redux/slice'
 
 export default function Products() {
+
+   const dispatch= useDispatch()
 
   const navigate = useNavigate()
     const [data,setData] = useState([])         
@@ -18,6 +22,12 @@ export default function Products() {
         }
         fetchApi()
     },[])
+
+
+
+    const senddata=(product)=>{
+        dispatch(addcart(product))
+    }
 
     const filterData=(category)=>{
         if(category=="All"){
@@ -54,8 +64,9 @@ export default function Products() {
                                     <h5 className='card-title m-2'>{product.title}</h5>
                                     <p className='card-text fw-600 fw-medium mb-1'>{product.description[0]}</p>
                                         <div className='d-flex justify-content-center align-items-center'>
-                                            <span className='text-warning fs-4'>&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                                            {/* <span className='text-warning fs-4'>&#9733;&#9733;&#9733;&#9733;&#9733;</span> */}
                                             <span className='text-light-emphasis fw-bold me-5'>{product.price}</span>
+                                            <div className=' btn btn-primary' onClick={()=>{senddata(product)}} >Add to cart</div>
                                         </div>
                                 </div>
                             </div>

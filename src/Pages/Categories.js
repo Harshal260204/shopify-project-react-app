@@ -45,7 +45,7 @@ function Categories() {
                 <div class="col-6 col-sm-4 col-md-3 col-lg-2 p-2">
                     <div class="category-container bg-secondary-subtle text-start text-dark p-3">
                         <h5>Mens Watches</h5>
-                        <h6><Link to="/MensWatches" class="text-decoration-none" href="#">View Products</Link></h6>
+                        <h6><Link to="/MensWatches" onClick={()=>filterData("All")} class="text-decoration-none" href="#">View Products</Link></h6>
                     </div>
                 </div>
                 <div class="col-6 col-sm-4 col-md-3 col-lg-2 p-2">

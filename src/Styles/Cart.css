@@ -5,3 +5,47 @@
     padding: 10px 0px;
     border-top: 1px solid #333;
 }
+
+/* Additional styling for cart elements to complement Bootstrap */
+.Cart {
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    font-weight: bold;
+    color: #444;
+  }
+  
+  .image-thumbnail {
+    max-width: 80px;
+    max-height: 80px;
+    object-fit: cover;
+    border-radius: 5px;
+  }
+  
+  .cart-item {
+    border-bottom: 1px solid #ddd;
+    padding: 15px 0;
+  }
+  
+  .cart-item:last-child {
+    border-bottom: none;
+  }
+  
+  .btn-danger {
+    font-size: 14px;
+    padding: 5px 15px;
+  }
+  
+  h2.total-price {
+    color: #198754;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: right;
+  }
+  
+  .empty-cart-message {
+    text-align: center;
+    color: #888;
+    margin-top: 20px;
+    font-size: 18px;
+  }
+  
